@@ -28,15 +28,33 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
-1. Describe the biggest difference between `.forEach` & `.map`.
+1. Describe the biggest difference between `.forEach` & `.map`. forEach: This iterates over a list and applies some operation with side effects to each list member (example: saving every list item to the database)
+
+map: This iterates over a list, transforms each member of that list, and returns another list of the same size with the transformed members (example: transforming list of strings to uppercase)
+
+For Each loops over the whole array and makes the exact same changes to the array in question. Map creates a new array.
+
 
 2. What is the difference between a function and a method?
 
+A method is a function that belongs to a class. In JavaScript, however, a method is a function that belongs to an object. Everything in JavaScript is an object; a function is an object; an Array is an object.
+
+
 3. What is closure?
+A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+
 
 4. Describe the four rules of the 'this' keyword.
 
+a. When in the global scope, the value of “this” will be the window/console Object;  JavaScript has a global object (or execution context) that exists wherever JavaScript lives. In the browser this is called window and in node it’s called global/console.
+b. Whenever a function is called by a preceding dot, the object before that dot is this.
+c. Whenever a constructor function is used, this refers to the specific instance of the object that is created and returned by the constructor function.
+d. Whenever JavaScript’s call or apply method is used, this is explicitly defined.
+
+
 5. Why do we need super() in an extended class?
+
+IF you’re going to use extends, super() needs to be called from within the constructor function. This is to pass any new attributes back up to the constructor of the parent object.
 
 ## Project Set up
 
@@ -65,11 +83,11 @@ Your finished project must include all of the following requirements:
 **Pro tip for this challenge: If something seems like it isn't working locally, copy and paste your code up to codepen and take another look at the console.**
 
 ## Task 1: Objects and Arrays
-Test your knowledge of objects and arrays. 
+Test your knowledge of objects and arrays.
 * [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
 
 ## Task 2: Functions
-This challenge takes a look at callbacks and closures as well as scope. 
+This challenge takes a look at callbacks and closures as well as scope.
 * [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 3: Prototypes
